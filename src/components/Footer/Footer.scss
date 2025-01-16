@@ -1,0 +1,46 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.footer {
+  display: flex;
+  padding: 32px;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: $G-bg;
+
+  &__btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+      width: 64px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+      border-radius: 16px;
+
+      &>img{
+        width: 30%;
+      }
+    }
+
+    &__text{
+      font-size: 12px;
+    }
+
+    &:hover{
+      .footer__btn__img{
+        background-color: $G-hover;
+      }
+
+      .footer__btn__text{
+        font-weight: bold;
+      }
+    }
+  }
+}

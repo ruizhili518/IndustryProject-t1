@@ -1,0 +1,15 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.mobilepage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &>img{
+    max-height: 60%;
+    width: 100%;
+    object-fit: contain;
+  }
+}

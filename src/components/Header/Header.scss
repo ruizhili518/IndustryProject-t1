@@ -1,0 +1,77 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.header {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  height: 64px;
+
+  &__logo {
+	display: flex;
+	align-items: center;
+
+	&__img{
+	  width: 64px;
+	}
+
+	&__text{
+	  padding-left: 8px;
+	  color: $G-grey;
+	  font-size: $fs-mobile;
+	}
+  }
+
+  &__actions{
+	display: flex;
+	align-items: center;
+
+	&__add-btn{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 32px;
+	  height: 32px;
+	  margin: 0 12px 0 0;
+	  border: 0;
+	  border-radius: 50%;
+	  font-size: $fs-mobile;
+	  background-color: transparent;
+
+	  &:hover{
+		background-color: $G-hover;
+	  }
+	}
+	&__alarm-btn{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 32px;
+	  height: 32px;
+	  margin: 0 12px 0 0;
+	  border: 0;
+	  border-radius: 50%;
+	  background-color: transparent;
+
+	  &>img{
+		width: 60%;
+	  }
+
+	  &:hover{
+		background-color: $G-hover;
+	  }
+	}
+
+	&__profile{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 32px;
+	  height: 32px;
+	  border: 0;
+	  border-radius: 50%;
+	  font-size: $fs-mobile;
+	  background-color: $G-green;
+	}
+  }
+}

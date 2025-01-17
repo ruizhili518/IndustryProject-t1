@@ -7,13 +7,36 @@
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  width: 100vw;
   background-color: $G-bg;
+  flex-shrink: 0;
+  text-align: center;
+
+  @include tablet {
+    padding: 0 80px;
+
+    @include desktop {
+      padding: 32px;
+      height: 100%;
+      flex-direction: column;
+      position: static;
+      width: 240px;
+      order: -1;
+      justify-content: flex-start;
+      align-items: start;
+    }
+  }
 
   &__btn{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+      
+    }
 
     &__img{
       width: 64px;
@@ -23,6 +46,10 @@
       align-items: center;
       margin-bottom: 8px;
       border-radius: 16px;
+
+      @include desktop {
+        margin: 0;
+      }
 
       &>img{
         width: 30%;

@@ -13,7 +13,7 @@ const Header = () => {
             <div className="header__actions">
                 <button className="header__actions__add-btn">+</button>
                 <button className="header__actions__alarm-btn"><img src={alarm} alt="alarm logo"/></button>
-                <div className="header__actions__profile">J</div>
+                <button className="header__actions__profile">J</button>
             </div>
         </header>
     );

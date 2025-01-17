@@ -10,13 +10,14 @@
   &__logo {
 	display: flex;
 	align-items: center;
+	margin-left: 12px;
 
 	&__img{
 	  width: 64px;
 	}
 
 	&__text{
-	  padding-left: 8px;
+	  padding: 0 0 2px 6px;
 	  color: $G-grey;
 	  font-size: $fs-mobile;
 	}
@@ -35,7 +36,7 @@
 	  margin: 0 12px 0 0;
 	  border: 0;
 	  border-radius: 50%;
-	  font-size: $fs-mobile;
+	  font-size: 24px;
 	  background-color: transparent;
 
 	  &:hover{
@@ -72,6 +73,7 @@
 	  border-radius: 50%;
 	  font-size: $fs-mobile;
 	  background-color: $G-green;
+	  margin-left: 5px;
 	}
   }
 }

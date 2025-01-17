@@ -6,11 +6,13 @@ import './MobilePage.scss'
 
 const MobilePage = () => {
     return (
-        <div className="mobilepage">
-            <Header/>
-            <img src={ScreenShot} alt="Screenshot"/>
-            <Footer/>
+        <div className="mobile-page">
+            <Header />
+        <div className="mobile-page__container">
+            <img src={ScreenShot} alt="Screenshot" className="mobile-page__screenshot"/>
+            <Footer />
         </div>
+    </div>
     );
 };
 

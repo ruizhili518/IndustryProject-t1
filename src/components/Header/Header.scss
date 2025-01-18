@@ -12,22 +12,22 @@
 	align-items: center;
 	margin-left: 12px;
 
-	&__img{
+	&__img {
 	  width: 64px;
 	}
 
-	&__text{
+	&__text {
 	  padding: 0 0 2px 6px;
 	  color: $G-grey;
 	  font-size: $fs-mobile;
 	}
   }
 
-  &__actions{
+  &__actions {
 	display: flex;
 	align-items: center;
 
-	&__add-btn{
+	&__add-btn {
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;

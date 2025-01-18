@@ -1,0 +1,146 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.welcome-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &__content {
+	background-color: $G-bg;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	padding: 48px;
+	max-width: 600px;
+	height: 600px;
+	width: 90%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+
+  &__welcome{
+	&>h1{
+	  margin-bottom: 24px;
+	}
+
+	&>h2{
+	  margin-bottom: 32px;
+	}
+  }
+
+  &__logo {
+	width: 120px;
+	margin-bottom: 24px;
+  }
+
+  &__button {
+	background-color: #1a73e8;
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 24px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+
+	&:hover {
+	  background-color: #1557b0;
+	}
+  }
+
+  &__cards {
+	background-color: #fff;
+	padding: 12px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+	margin: 32px 0;
+  }
+
+  &__card {
+	aspect-ratio: 1;
+	perspective: 1000px;
+	cursor: pointer;
+
+	&-inner {
+	  position: relative;
+	  width: 100%;
+	  height: 100%;
+	  transform-style: preserve-3d;
+	  transition: transform 0.6s;
+	}
+
+	&--flipped &-inner {
+	  transform: rotateY(180deg);
+	}
+
+	&--matched {
+	  opacity: 0;
+	  transition: opacity 0.6s;
+	  pointer-events: none;
+	}
+
+	&-front,
+	&-back {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  backface-visibility: hidden;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+
+	  img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	  }
+	}
+
+	&-back {
+	  transform: rotateY(180deg);
+	}
+  }
+
+  &__result {
+	&>h2{
+	  margin-bottom: 8px;
+	  margin-top: 16px;
+	}
+
+	&>h3{
+	  margin-bottom: 16px;
+	}
+
+	&>p{
+	  margin-bottom: 16px;
+	}
+  }
+
+  &__final {
+
+	h3 {
+	  margin-bottom: 24px;
+	}
+	p {
+	  margin-bottom: 32px;
+	  color: #5f6368;
+	}
+
+	&__actions{
+	  &>button{
+		margin: 0 12px 0 12px;
+	  }
+	}
+  }
+}
